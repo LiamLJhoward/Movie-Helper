@@ -1,8 +1,12 @@
 $(document).ready(function () {
-  function movie() {
+  function movie(event) {
+
+    event.preventDefault()
+    clear()
+
     let apiurl = "https://api.themoviedb.org/3/search/movie?";
     let key = "api_key=408148785d4227b956248e0bb1647b96&query=";
-    let title = "creed ";
+    let title = $('#search-input').val().trim();
     let movievidoes = "&append_to_response=videos";
 
     $.ajax({
@@ -11,54 +15,43 @@ $(document).ready(function () {
     }).then(function (response) {
       console.log(response);
 
-
-// for posters 
-      let moviecontainer = $("<img>");
+      // for posters
+      let moviePostercontainer = $("<img>");
       let path = response.results[0].poster_path;
       let purl = "https://image.tmdb.org/t/p/w500/";
-      moviecontainer.attr("src", purl + path);
+      moviePostercontainer.attr("src", purl + path);
 
       console.log(path);
 
-     
+      // for movies
+      // setting up movie url
+      let trailerUrl = "https://api.themoviedb.org/3/movie/";
+      let trailerkey =
+        "/videos?api_key=408148785d4227b956248e0bb1647b96&language=en-US";
+      let trailerid = response.results[0].id;
 
-      // for movies 
-
-     
-
-   /*    let movievideo = $("<video>")
-      let source = "https://api.themoviedb.org/3/movie/312221/videos?api_key=408148785d4227b956248e0bb1647b96&language=en-US"
-      movievideo.attr("src", source) 
- */
-
-      $(".anything").append(moviecontainer);
-    });
-
-    $.ajax({
-
-        url:  "https://api.themoviedb.org/3/movie/312221/videos?api_key=408148785d4227b956248e0bb1647b96&language=en-US",
+      // movie trailer api call
+      $.ajax({
+        url: trailerUrl + trailerid + trailerkey,
         method: "GET",
-      }).then(function(response){
+      }).then(function (response) {
+        console.log(response);
 
-        console.log(response)
+        let youtube = "https://www.youtube.com/embed/";
+        let id = response.results[0].key;
+        $(".videos").attr("src", youtube + id);
 
-        
-        let youtube= "https://www.youtube.com/embed/"
-        let id = response.results[0].key
-        $('.videos').attr("src", youtube + id) 
-       
+        console.log(youtube + id);
+      });
 
-
-
-console.log(youtube + id)
-        
-
-
-      }) 
+      $(".anything").append(moviePostercontainer);
+    });
   }
 
-  movie();
+  $("#search-button").on("click", movie);
+
+  function clear (){
+
+    $('.anything').empty();
+  }
 });
-
-
-
