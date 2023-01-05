@@ -1,12 +1,11 @@
 $(document).ready(function () {
   function movie(event) {
-
-    event.preventDefault()
-    clear()
+    event.preventDefault();
+    clear();
 
     let apiurl = "https://api.themoviedb.org/3/search/movie?";
     let key = "api_key=408148785d4227b956248e0bb1647b96&query=";
-    let title = $('#search-input').val().trim();
+    let title = $("#search-input").val().trim();
     let movievidoes = "&append_to_response=videos";
 
     $.ajax({
@@ -22,6 +21,14 @@ $(document).ready(function () {
       moviePostercontainer.attr("src", purl + path);
 
       console.log(path);
+      // movie synopsis
+      let movieDetail = $("<p>");
+      movieDetail.text(response.results[0].overview);
+
+      // movie title
+
+      let mTitle = $("<h2>");
+      mTitle.text(response.results[0].title);
 
       // for movies
       // setting up movie url
@@ -44,14 +51,13 @@ $(document).ready(function () {
         console.log(youtube + id);
       });
 
-      $(".anything").append(moviePostercontainer);
+      $(".anything").append(mTitle, moviePostercontainer, movieDetail);
     });
   }
 
   $("#search-button").on("click", movie);
 
-  function clear (){
-
-    $('.anything').empty();
+  function clear() {
+    $(".anything").empty();
   }
 });
