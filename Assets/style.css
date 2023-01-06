@@ -27,9 +27,16 @@ p {
 .videos {
 }
 .vl {
-  border-left: 2px solid gray;
-  height: 500px;
-  left: 50%;
-  margin-left: -3px;
-  top: 0;
+
+    border-left: 2px solid gray;
+    height: 500px;
+    position: flex;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
 }
+
+.navbar-brand {
+
+}
+
