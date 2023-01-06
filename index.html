@@ -10,24 +10,53 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
   <link rel ="stylesheet" href="./Assets/style.css" />
-    <title>Document</title>
+    <title>Movie Helper</title>
+    <link rel="icon" type="image/x-icon" href="./Assets/Images/icons8-film-reel.gif">
 </head>
 <body>
-    <form id="search-form" class="form">
-        <div class="form-inline form-group">
-          <div class="input-group">
-            <input class="search-input movie-search" type="text" id="search-input" placeholder="Search for your movie"
-              aria-labelledby="form-heading" />
-            <div class="input-group-append">
-              <button type="submit" class="btn search-button btn-primary" id="search-button" aria-label="submit search">
-                Search
-              </button>
-              <hr class="hr movie-hr" />
-            </div>
-          </div>
-        </div>
-      </form>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light justify-content-right">
+    <div class="container">
+      <a href="#" class="navbar-brand">Movie Helper Logo To Go Here</a>
 
+      <!-- Navbar Mmenu-->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navselection">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navselection">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#what-is" class="nav-link">What Is Movie Helper</a>
+            <a href="#contact-us" class="nav-link">Contact Us</a>
+            
+          </li>
+          
+        </ul>
+      </div>
+    </div>     
+  </nav>
+
+  <form id="search-form" class="form">
+    <div class="form-inline form-group">
+      <div class="input-group">
+        <input class="search-input movie-search" type="text" id="search-input" placeholder="Search for your movie"
+          aria-labelledby="form-heading" />
+        <div class="input-group-append">
+          <button type="submit" class="btn search-button btn-primary" id="search-button" aria-label="submit search">
+            Search
+          </button>
+          <hr class="hr movie-hr" />
+        </div>
+      </div>
+    </div>
+  </form>
   <div class="anything"></div>
   <div class="vl"></div>
 
