@@ -1,32 +1,33 @@
 h2 {
-    font-family: 'Crimson Text', serif;
-    font-weight: 700;
-    padding-left: 4%;
-    padding-top: 5%;
-    font-size: 3rem;
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  padding-left: 4%;
+  padding-top: 5%;
+  font-size: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
 img {
-    display: inline-block;
-    padding: 2rem;
-    width: 350px;
-   
+  flex: 1;
+  padding: 2rem;
+  width: 350px;
 }
 
 p {
-    display: inline-block;
-    width: 450px;
-    font-family: 'Crimson Text', serif;
-    font-size: 1.4rem;
-    text-align: right;
+  width: 450px;
+  font-family: "Crimson Text", serif;
+  font-size: 1.4rem;
+  text-align: right;
 }
 
 .videos {
-    float: right;
-    margin-top: -50%;
-    
 }
 .vl {
+
     border-left: 2px solid gray;
     height: 500px;
     position: flex;
@@ -38,3 +39,4 @@ p {
 .navbar-brand {
 
 }
+
