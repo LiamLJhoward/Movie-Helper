@@ -1,40 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap and icon from font awesome link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
-  <link rel ="stylesheet" href="./Assets/style.css" />
-    <title>Document</title>
+  <!-- Bootstrap and icon from font awesome link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./Assets/style.css" />
+  <title>Document</title>
 </head>
+
 <body>
-    <form id="search-form" class="form">
-        <div class="form-inline form-group">
-          <div class="input-group">
-            <input class="search-input movie-search" type="text" id="search-input" placeholder="Search for your movie"
-              aria-labelledby="form-heading" />
-            <div class="input-group-append">
-              <button type="submit" class="btn search-button btn-primary" id="search-button" aria-label="submit search">
-                Search
-              </button>
-              <hr class="hr movie-hr" />
-            </div>
-          </div>
+  <form id="search-form" class="form">
+    <div class="form-inline form-group">
+      <div class="input-group">
+        <input class="search-input movie-search" type="text" id="search-input" placeholder="Search for your movie"
+          aria-labelledby="form-heading" />
+        <div class="input-group-append">
+          <button type="submit" class="btn search-button btn-primary" id="search-button" aria-label="submit search">
+            Search
+          </button>
+          <hr class="hr movie-hr" />
         </div>
-      </form>
+      </div>
+    </div>
+  </form>
 
-  <div class="anything"></div>
-  <div class="vl"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm movie">
+      </div>
+      <div class="col-sm description">
+       
+      </div>
+      <div class="vl col-sm">
+      </div>
+      <div class="col-sm">
+        <iframe class="videos" width="560" height="315" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 
-  <iframe class="videos" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-    <!-- jquery link and java script file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./Assets/app.js"></script>
+    
+    
+
+    
+
+ 
+  <!-- jquery link and java script file -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./Assets/app.js"></script>
 </body>
+
 </html>

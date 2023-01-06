@@ -63,7 +63,8 @@ $(document).ready(function () {
         console.log(youtube + id);
       });
 
-      $(".anything").append(mTitle, moviePostercontainer, movieDetail);
+      $(".movie").append(mTitle, moviePostercontainer);
+      $(".description").append(movieDetail);
     });
   }
 
