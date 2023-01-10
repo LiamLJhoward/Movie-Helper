@@ -18,7 +18,7 @@ $(document).ready(function () {
 
   // this function would load the movie we are searching
   function movie() {
-    clear();
+   
 
     $.ajax({
       url: apiurl + key + title + movievidoes,
@@ -35,6 +35,7 @@ $(document).ready(function () {
       console.log(path);
       // movie synopsis
       let movieDetail = $("<p>");
+      movieDetail.attr("class","synopsis")
       movieDetail.text(response.results[0].overview);
 
       // movie title
@@ -66,6 +67,8 @@ $(document).ready(function () {
       $(".anything").append(mTitle, moviePostercontainer);
       $(".description").append(movieDetail);
     });
+
+    clear();
   }
 
   // search button click
@@ -93,14 +96,14 @@ $(document).ready(function () {
   }
 
   function clear() {
-    $(".anything").empty();
-    $(".videos").empty();
+    $(".anything").empty(); 
+    $(".synopsis").empty(); 
+   
   }
 });
 
-function me(){
+
 
   
-}
 
-// free form just like that 
+
