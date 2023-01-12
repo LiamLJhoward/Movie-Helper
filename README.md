@@ -1,5 +1,6 @@
 # project-one
 
+![A screenshot of Movie Helper](/Assets/Images/Movie%20Helper.png) 
 
 ## About
 
