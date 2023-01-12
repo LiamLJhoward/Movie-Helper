@@ -1,7 +1,7 @@
 # Project One - Movie Helper
 
 
-![A screenshot of Movie Helper](/Assets/Images/Movie%20Helper.png) 
+![A screenshot of Movie Helper](/Assets/Images/Screenshot.png)
 
 ## About
 
