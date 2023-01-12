@@ -13,14 +13,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
     <link rel ="stylesheet" href="./Assets/style.css" />
     <title>Movie Helper</title>
-    <link rel="icon" type="image/x-icon" href="./Assets/Images/icons8-film-reel.gif">
+    <link rel="icon" type="image/x-icon" href="./Assets/Images/icons8-cinema.gif">
+    <script src="https://kit.fontawesome.com/7017ded690.js" crossorigin="anonymous"></script>
 </head>
 
 <body> 
   <!-- Navbar -->
   <nav class="AppNavbar navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <a href="#" class="navbar-brand">Movie Helper Logo To Go Here</a>
+      <div class="container-fixed">
+        <a class="navbar-brand" href="#">
+          <img src="./Assets/Images/movie-helper-logo.jpeg" alt="Movie Helper">
+        </a>
+      </div>
 
       <!-- Navbar Menu-->
       <button 
@@ -37,21 +41,18 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#what-is">What Is Movie Helper</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="#contact-us">Contact Us</a>
+            <a class="nav-link" href="mailto:helpdesk@moviehelper.com">Contact Us</a>
           </li> 
           <li class="nav-item">
             <form id="search-form" class="AppSearchForm form">
                 <div class="input-group">
-                  <input class="search-input movie-search" type="text" id="search-input" placeholder="Search for your movie"
-                    aria-labelledby="form-heading" />
+                  <input class="AppSearch search-input movie-search" type="text" id="search-input" placeholder="Search for your favourite movie"
+                    aria-labelledby="form-heading"/>
                   <div class="input-group-append">
-                    <button type="submit" class="btn search-button btn-primary" id="search-button" aria-label="submit search">
-                      Search
+                    <button type="submit" class="btn search-button btn-warning" id="search-button" aria-label="submit search">
+                      <i class="fa fa-search"></i>
                     </button>
                 </div>
               </div>
@@ -62,7 +63,6 @@
     </div>     
   </nav>
 
-  
   <div class="AppContainer container">
     <div class="row">
       <div class="col-md-6 anything">
@@ -72,9 +72,29 @@
       </div>
     </div>
   </div>
-    
-    
 
+  <!-- Footer -->
+  <footer class="AppFooter page-footer fixed-bottom id=footer">
+      <div class="AppFooterText">
+        <span>Connect with us on GitHub:</span>
+        <div class="d-flex p-1">
+          <ul class="AppFooterList nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="https://github.com/honza485a" target="_blank">Jan's Github</a>
+              <i class="fa-brands fa-github"></i>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="https://github.com/seuncaleb" target="_blank">Caleb's Github</a>
+                <i class="fa-brands fa-github"></i>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://github.com/LiamLJhoward" target="_blank">Liam's GitHub</a>
+                  <i class="fa-brands fa-github"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </footer>
     
 
  
