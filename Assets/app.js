@@ -93,6 +93,8 @@ $(document).ready(function () {
   // search button click
   $("#search-button").on("click", findMovie);
   $(window).on("load", refresh);
+  $(".home").on("click", refresh)
+  $(".logo").on("click", refresh)
 
   // this function saves searched movies in an array
   function searchedMovies() {
@@ -123,4 +125,7 @@ $(document).ready(function () {
 
     
   }
+
+ 
+
 });
