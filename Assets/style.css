@@ -1,6 +1,11 @@
+body {
+  background-color: hsl(0, 0%, 0%);
+}
+
 .AppContainer {
   padding-top: 88px;
   padding-bottom: 40px;
+  color: hsl(206, 30%, 95%);
 }
 
 .AppContainer img{
@@ -8,19 +13,57 @@
 }
 
 .AppNavbar {
-  background-color: hsl(205, 50%, 54%);
+  background-color: hsl(200, 5%, 22%);
 }
 
-.AppNavbar .nav-item {
+.AppNavbar img {
+  width: 60px;
+  height: 30px;
+  margin: 0;
+}
+
+.AppNavbar .nav-item .nav-link{
   display: flex;
   align-items: center;
+  color: hsl(206, 30%, 95%);
 }
+
 
 .AppSearchForm {
   padding-left: 24px;
 }
 
+
 .AppVideo {
   padding-top: 45px;
   padding-bottom: 16px;
+}
+
+.AppFooter {
+  font-size: 16px; 
+  padding: 16px;
+  align-items: center;
+  display: flex;
+  background-color: hsl(200, 5%, 22%);
+  }
+
+
+.AppFooter .AppFooterText {
+  color: hsl(206, 30%, 95%);
+}
+
+.AppFooter .AppFooterText ul li a{
+  color: hsl(120, 14%, 90%);
+  font-weight: bold;
+}
+
+.AppSearch {
+  width: 300px;
+}
+
+.AppFooter .nav-item {
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+  flex-direction: row-reverse;
 }
