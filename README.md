@@ -19,7 +19,7 @@ A website where you type in a movie, and it retrieves the films poster, a traile
 
 ## Link
 
-[Movie Helper](https://liamljhoward.github.io/project-one/ "Movie Helper")
+[Movie Helper](https://liamljhoward.github.io/Movie-Helper/ "Movie Helper")
 
 ## Licence
 
