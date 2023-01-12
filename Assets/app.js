@@ -94,7 +94,11 @@ $(document).ready(function () {
   $("#search-button").on("click", findMovie);
   $(window).on("load", refresh);
   $(".home").on("click", refresh)
-  $(".logo").on("click", refresh)
+  $(".logo").on("click", function(){
+
+    localStorage.clear();
+    location.reload();
+  })
 
   // this function saves searched movies in an array
   function searchedMovies() {
@@ -112,9 +116,10 @@ $(document).ready(function () {
       title = onR[i - 1];
 
       movie();
-      boxOffice() ;
-      
+      boxOffice() ;  
     }
+
+    
   }
 
   function clear() {
