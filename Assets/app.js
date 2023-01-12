@@ -13,13 +13,31 @@ $(document).ready(function () {
       title = $("#search-input").val().trim();
       movie();
       searchedMovies();
+      boxOffice()
     }
   }
 
+  // box office prize function
+
+  function boxOffice() {
+    var queryURL = "https://www.omdbapi.com/?t=" + title + "&apikey=trilogy";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function (response) {
+      console.log(response);
+
+      let boxOffice = $("<h3>")
+      boxOffice.text("Box Office: " + response.BoxOffice)
+      boxOffice.attr("class", "boxMoney")
+      $(".description").append(boxOffice)
+
+      console.log(boxOffice)
+    });
+  }
   // this function would load the movie we are searching
   function movie() {
-   
-
     $.ajax({
       url: apiurl + key + title + movievidoes,
       method: "GET",
@@ -35,7 +53,7 @@ $(document).ready(function () {
       console.log(path);
       // movie synopsis
       let movieDetail = $("<p>");
-      movieDetail.attr("class","synopsis")
+      movieDetail.attr("class", "synopsis");
       movieDetail.text(response.results[0].overview);
 
       // movie title
@@ -59,9 +77,10 @@ $(document).ready(function () {
 
         let youtube = "https://www.youtube.com/embed/";
         let id = response.results[0].key;
+
         $(".videos").attr("src", youtube + id);
 
-        console.log(youtube + id);
+        console.log(id);
       });
 
       $(".anything").append(mTitle, moviePostercontainer);
@@ -81,8 +100,7 @@ $(document).ready(function () {
     localStorage.setItem("movieSearch", JSON.stringify(movieArr));
   }
 
-
-  // function to keep last searched movie on the page on refresh 
+  // function to keep last searched movie on the page on refresh
   function refresh() {
     let onR = JSON.parse(localStorage.getItem("movieSearch"));
 
@@ -92,18 +110,17 @@ $(document).ready(function () {
       title = onR[i - 1];
 
       movie();
+      boxOffice() ;
+      
     }
   }
 
   function clear() {
-    $(".anything").empty(); 
-    $(".synopsis").empty(); 
-   
+    $(".anything").empty();
+    $(".synopsis").empty();
+    $(".boxMoney").empty();
+    
+
+    
   }
 });
-
-
-
-  
-
-
