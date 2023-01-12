@@ -28,11 +28,13 @@ body {
   color: hsl(206, 30%, 95%);
 }
 
+.AppNavbar .nav-item a:hover{
+  color: #ffc107 !important;
+}
 
 .AppSearchForm {
   padding-left: 24px;
 }
-
 
 .AppVideo {
   padding-top: 45px;
@@ -41,7 +43,7 @@ body {
 
 .AppFooter {
   font-size: 16px; 
-  padding: 16px;
+  padding: 4px;
   align-items: center;
   display: flex;
   background-color: hsl(200, 5%, 22%);
@@ -66,4 +68,8 @@ body {
   align-items: center;
   padding-right: 16px;
   flex-direction: row-reverse;
+}
+
+.AppFooter .nav-item a:hover{
+  color: #ffc107;
 }
