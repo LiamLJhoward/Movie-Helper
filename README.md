@@ -1,4 +1,4 @@
-# project-one
+# Project One - Movie Helper
 
 ![A screenshot of Movie Helper](/Assets/Images/Movie%20Helper.png) 
 
